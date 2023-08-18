@@ -748,6 +748,9 @@ class SheetState extends State<SheetScrollable>
 
   @override
   double? get initialExtent => widget.initialExtent;
+
+  @override
+  double get devicePixelRatio => MediaQuery.devicePixelRatioOf(context);
 }
 
 /// With [_ScrollSemantics] certain child [SemanticsNode]s can be
