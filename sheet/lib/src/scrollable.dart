@@ -752,9 +752,6 @@ class SheetState extends State<SheetScrollable>
 
   @override
   double? get initialExtent => widget.initialExtent;
-
-  @override
-  double get devicePixelRatio => MediaQuery.devicePixelRatioOf(context);
 }
 
 /// With [_ScrollSemantics] certain child [SemanticsNode]s can be
@@ -778,7 +775,7 @@ class _ScrollSemantics extends SingleChildRenderObjectWidget {
     required this.allowImplicitScrolling,
     required this.semanticChildCount,
     super.child,
-  })  : assert(semanticChildCount == null || semanticChildCount >= 0);
+  }) : assert(semanticChildCount == null || semanticChildCount >= 0);
 
   final ScrollPosition position;
   final bool allowImplicitScrolling;
